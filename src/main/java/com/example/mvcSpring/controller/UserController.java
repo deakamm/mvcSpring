@@ -1,15 +1,30 @@
 package com.example.mvcSpring.controller;
 
 import com.example.mvcSpring.model.User;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
 @RestController
 public class UserController {
+    Logger logger = LoggerFactory.getLogger(UserController.class);
+
+    public String log() {
+        logger.trace("A TRACE Message");
+        logger.debug("A DEBUG Message");
+        logger.info("An INFO Message");
+        logger.warn("A WARN Message");
+        logger.error("An ERROR Message");
+
+        return "Hi!!, Check out the Logs to see the output...";
+    }
+
     private ArrayList<User> users = new ArrayList<>();
 
-    public UserController(){
+    public UserController() {
         users.add(new User(1, "Umo", "Balde"));
         users.add(new User(2, "Gerard", "Carlo"));
         users.add(new User(3, "Raul", "Garcia"));
@@ -74,4 +89,3 @@ public class UserController {
         return borrar;
     }
 }
-

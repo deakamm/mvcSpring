@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crear Post</h1>
+    <fieldset>
+        <legend>Login:</legend>
+        <form id="postForm" method="post">
+            <label for="">FisrtName</label>
+            <input type="text" name="nombre" id="nombre"><br><br>
+            <label for="">LastName</label>
+            <input type="text" name="apellido" id="apellido"><br><br>
+            <button type="submit">Save</button>
+        </form>
+    </fieldset>
+    <script>
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value='Pepe';
+            const apellido = document.getElementById('apellido').value ="Perez";
+           
+        });
+    </script>
+</body>
+</html>
