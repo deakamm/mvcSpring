@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
+//@RequestMapping("/user")
 public class UserController {
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -24,15 +25,15 @@ public class UserController {
 
     private ArrayList<User> users = new ArrayList<>();
 
-    public UserController() {
-        users.add(new User(1, "Umo", "Balde"));
-        users.add(new User(2, "Gerard", "Carlo"));
-        users.add(new User(3, "Raul", "Garcia"));
-        users.add(new User(4, "Paula", "Rodriguez"));
-        users.add(new User(5, "Jerrimy", "Compagny"));
-        users.add(new User(6, "Ansu", "Faty"));
-        users.add(new User(7, "Drake", "Jhonas"));
-    }
+    // public UserController() {
+    //     users.add(new User(1, "Umo", "Balde"));
+    //     users.add(new User(2, "Gerard", "Carlo"));
+    //     users.add(new User(3, "Raul", "Garcia"));
+    //     users.add(new User(4, "Paula", "Rodriguez"));
+    //     users.add(new User(5, "Jerrimy", "Compagny"));
+    //     users.add(new User(6, "Ansu", "Faty"));
+    //     users.add(new User(7, "Drake", "Jhonas"));
+    // }
 
     @GetMapping("/user")
     public User getUser(@RequestParam(name = "id") int id) {
