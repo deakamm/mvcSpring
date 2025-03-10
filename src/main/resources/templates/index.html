@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    h1{
+        display: grid;
+        color: chocolate;
+        text-align: center;
+    }
+</style>
+<body>
+<h1>Logs Spring</h1>
+<fieldset>
+    <legend>
+       <h2>Login</h2>
+    </legend>
+    <form id="postForm">
+    <label>FirstName:
+    <input  type="text" id="nombre" placeholder="escribe ton nombre" required>
+    </label><br><br>
+    <label>LastName:
+        <input type="text" id="apellido" placeholder="escribe tu apellido" required>
+    </label><br><br>
+    <button type="submit">Save <b>in</b></button><br>
+    <a href="/users">Users</a>
+    </form>
+</fieldset>
+<script>
+    document.getElementById('postForm').addEventListener('submit',
+    function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value='Duke';
+      console.log("Escribir tu nombre: " + nombre);
+      const apellido = document.getElementById('apellido').value='Lopez';
+      console.log("Escribir tu apellido: " + apellido);
+    });
+
+</script>
+</body>
+
+</html>

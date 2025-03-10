@@ -1,0 +1,72 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "234567-1",
+        "author": "Anioa",
+        "changes": [
+          {
+            "createTable": {
+              "tableName": "users",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "int",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "phone",
+                    "type": "int"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "username",
+                    "type": "varchar(255)",
+                      "constraints": {
+                          "nullable": false
+                      }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "first_name",
+                    "type": "varchar(255)",
+                      "constraints": {
+                          "nullable": false
+                      }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "last_name",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "email",
+                    "type": "varchar(255)",
+                      "constraints": {
+                          "nullable": false
+                      }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

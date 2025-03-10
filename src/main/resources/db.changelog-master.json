@@ -1,0 +1,11 @@
+{
+  "databaseChangeLog": [
+    {
+      "include": {
+        "file": "init-schema.json",
+        "relativeToChangelogFile": true
+      }
+    }
+  ]
+}
+
